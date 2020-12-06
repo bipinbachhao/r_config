@@ -3,10 +3,14 @@ maintainer 'Bipin Bachhao'
 maintainer_email 'bipinbachhao@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures R and Installs R Packages'
-version '0.1.2'
+version '0.1.3'
 chef_version '>= 15.0'
 
 depends 'java', '>= 8.5.0'
+
+%w( amazon centos fedora debian redhat ubuntu ).each do |os|
+  supports os
+end
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
