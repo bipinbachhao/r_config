@@ -12,10 +12,11 @@ depends 'java', '>= 8.5.0'
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
 #
-# issues_url 'https://github.com/<insert_org_here>/r_config/issues'
+issues_url 'https://github.com/bipinbachhao/r_config/issues'
 
 # The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-# source_url 'https://github.com/<insert_org_here>/r_config'
+
+source_url 'https://github.com/bipinbachhao/r_config'
