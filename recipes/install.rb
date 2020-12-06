@@ -48,3 +48,7 @@ end
 r_config_package 'Matrix'
 
 r_config_package 'DBI'
+
+r_config_package 'odbc' do
+  action :install
+end

@@ -10,7 +10,7 @@ name 'r_config'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'r_config::default', 'r_config::prerequisites', 'r_config::install'
+run_list 'r_config::default', 'r_config::prerequisites', 'r_config::install', 'r_config::install_packages'
 
 # Specify a custom source for a single cookbook:
 cookbook 'r_config', path: '.'

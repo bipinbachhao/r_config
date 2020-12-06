@@ -25,16 +25,16 @@ action :install do
 end
 
 action :delete do
-  if installed?(package_name)
+  if installed?(new_resource.package_name)
     converge_by("Deleting R Package #{@new_resource}: ") do
-      delete(package_name)
+      delete(new_resource.package_name)
     end
   end
 end
 
 action :upgrade do
   converge_by("Upgrading R Package #{@new_resource}: ") do
-    install(package_name)
+    install(new_resource.package_name)
   end
 end
 
