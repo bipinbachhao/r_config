@@ -58,7 +58,7 @@ end
 def which_RLib
   if ::Dir.exist?(::File.join(node['r_config']['prefix'], 'lib64'))
     ::File.join(node['r_config']['prefix'], 'lib64')
-    elseif ::Dir.exist?(::File.join(node['r_config']['prefix'], 'lib'))
+  elsif ::Dir.exist?(::File.join(node['r_config']['prefix'], 'lib'))
     ::File.join(node['r_config']['prefix'], 'lib')
   else
     '/usr/lib64'
@@ -69,7 +69,11 @@ end
 def installed?(package)
   if ::File.exist?(::File.join(node['r_config']['prefix'], 'lib64', 'R', 'library', "#{package}", 'R', "#{package}"))
     true
+  elsif ::File.exist?(::File.join(node['r_config']['prefix'], 'lib64', "#{package}", 'R', "#{package}"))
+    true
   elsif ::File.exist?(::File.join(node['r_config']['prefix'], 'lib', 'R', 'library', "#{package}", 'R', "#{package}"))
+    true
+  elsif ::File.exist?(::File.join(node['r_config']['prefix'], 'lib', "#{package}", 'R', "#{package}"))
     true
   else
     false
@@ -95,7 +99,7 @@ def install(_package)
   command += "configure.args=#{configure_args}, " unless configure_args.empty?
   command += "configure.vars=#{configure_vars}, " unless configure_vars.empty?
   command += "INSTALL_opts='#{install_opts}', " unless install_opts.empty?
-  command += "repos=c(#{repos}), Ncpus = getOption('Ncpus' 4L), lib='" + which_RLib +
+  command += "repos=c(#{repos}), Ncpus = getOption('Ncpus', 4L), lib='" + which_RLib +
              "' , dependencies=#{dependencies})), " \
              'warning=function(w){print(w); quit(status=1)}, ' \
              'error=function(e){print(e); quit(status=1)})"'
