@@ -110,9 +110,6 @@ Style/FrozenStringLiteralComment:
 Style/GuardClause:
   Enabled: false
 
-Style/HashSyntax:
-  EnforcedStyle: hash_rockets
-
 # compact code is nice, but this is actually harder to read for new users
 Style/IfUnlessModifier:
   Enabled: false

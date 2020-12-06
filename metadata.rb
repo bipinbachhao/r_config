@@ -1,9 +1,9 @@
 name 'r_config'
 maintainer 'Bipin Bachhao'
 maintainer_email 'bipinbachhao@gmail.com'
-license 'All Rights Reserved'
-description 'Installs/Configures r_config'
-version '0.1.0'
+license 'Apache 2.0'
+description 'Installs/Configures R and Installs R Packages'
+version '0.1.1'
 chef_version '>= 15.0'
 
 depends 'java', '>= 8.5.0'

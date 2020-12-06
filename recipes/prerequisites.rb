@@ -2,7 +2,7 @@
 # Cookbook:: r_config
 # Recipe:: prerequisites
 #
-# Copyright:: 2018, The Authors, All Rights Reserved.
+# Apache 2.0 license
 
 case node['platform_family']
 when 'debian'
