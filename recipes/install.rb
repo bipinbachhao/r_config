@@ -2,7 +2,7 @@
 # Cookbook:: r_config
 # Recipe:: install
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
+# Apache 2.0 license
 
 include_recipe '::prerequisites'
 
@@ -43,12 +43,4 @@ execute 'Install_R' do
   make install-libR
   INSTALL
   creates "#{prefix}/bin/R"
-end
-
-r_config_package 'Matrix'
-
-r_config_package 'DBI'
-
-r_config_package 'odbc' do
-  action :install
 end

@@ -3,7 +3,7 @@ maintainer 'Bipin Bachhao'
 maintainer_email 'bipinbachhao@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures R and Installs R Packages'
-version '0.1.1'
+version '0.1.2'
 chef_version '>= 15.0'
 
 depends 'java', '>= 8.5.0'
